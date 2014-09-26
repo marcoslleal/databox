@@ -26,12 +26,12 @@ class Databox::Client
   def push data={}
     if validate data
       data = [data] unless data.is_a?(Array)
-      handle self.class.post("/push/custom/#{self.token}", body: { data: data }.to_json)
+      handle self.class.post("/source/#{self.token}/data", body: { data: data }.to_json)
     end
   end
 
   def logs
-    handle self.class.get("/push/custom/#{self.token}/logs")
+    handle self.class.get("/source/#{self.token}/logs")
   end
 
   def handle response
