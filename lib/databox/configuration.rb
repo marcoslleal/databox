@@ -5,7 +5,7 @@ class Databox::Configuration
     :token
 
   def initialize
-    @url ||= ENV["DATABOX_URL"] || 'https://app.databox.com'
+    @url ||= ENV["DATABOX_URL"] || 'https://api.databox.com'
     @key ||= ENV["DATABOX_KEY"]
     @token ||= ENV["DATABOX_TOKEN"]
   end
