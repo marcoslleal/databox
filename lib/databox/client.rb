@@ -37,9 +37,9 @@ class Databox::Client
   def handle response
     if response.code > 201
       raise Databox::ClientError.new(
-        response.code.to_s+" - "+
-        response.parsed_response["error"]["type"]+" - "+
-        response.parsed_response["error"]["message"]
+        response.code.to_s + " - " +
+        response.parsed_response["error"]["type"].to_s + " - " +
+        response.parsed_response["error"]["message"].to_s
       )
     end
 
